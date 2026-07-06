@@ -1,0 +1,2 @@
+Add your hero banner image here and name it "banner.jpg"
+(see components/Hero.jsx and the README for details).
