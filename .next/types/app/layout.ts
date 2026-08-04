@@ -1,4 +1,4 @@
-// File: /Users/himanshukumartiwari/Desktop/popcorn-landing 2/app/layout.jsx
+// File: /Users/himanshukumartiwari/Desktop/popcornmanufacturer/app/layout.jsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

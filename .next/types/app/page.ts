@@ -1,4 +1,4 @@
-// File: /Users/himanshukumartiwari/Desktop/popcorn-landing 2/app/page.jsx
+// File: /Users/himanshukumartiwari/Desktop/popcornmanufacturer/app/page.jsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
