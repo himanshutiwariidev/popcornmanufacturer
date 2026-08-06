@@ -2,27 +2,32 @@ const STEPS = [
   {
     step: "01",
     title: "Sourcing",
-    desc: "Butterfly & mushroom kernels graded on moisture and pop-rate before intake.",
+    desc: "We hand-pick corn based on size, moisture, and popping expansion, since a bad kernel batch ruins the whole line.",
   },
   {
     step: "02",
-    title: "Popping",
-    desc: "Hot-air and oil popping lines run to a fixed expansion ratio per batch.",
+    title: "Cleaning & Grading",
+    desc: "Every batch is cleaned and graded before it enters production.",
   },
   {
     step: "03",
-    title: "Flavouring",
-    desc: "Seasoning applied while warm for even coating across the batch.",
+    title: "Air-Popping",
+    desc: "We use air-popping technology instead of deep frying, which is what keeps our popcorn light, crispy, and lower in fat.",
   },
   {
     step: "04",
-    title: "Packing",
-    desc: "Nitrogen-flushed packs sealed on-site to lock in crunch and shelf life.",
+    title: "Flavouring",
+    desc: "Butter, salt, cheese, caramel — each seasoning is applied fresh, in-house.",
   },
   {
     step: "05",
-    title: "Dispatch",
-    desc: "Batch-coded cartons palletised and routed to retail, cinema or export.",
+    title: "Hygienic Packing",
+    desc: "Packed in moisture-proof, food-grade material to lock in crunch till it reaches the shelf.",
+  },
+  {
+    step: "06",
+    title: "Quality Checks",
+    desc: "Every stage runs under FSSAI, ISO, and HACCP standards, not just the final product.",
   },
 ];
 
@@ -35,12 +40,12 @@ export default function Process() {
             How it&apos;s made
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-ink sm:text-4xl">
-            Kernel to bag in five tracked stages.
+            How We Manufacture — From Kernel to Pack
           </h2>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
-          {STEPS.map((item, i) => (
+        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 lg:gap-y-14">
+          {STEPS.map((item) => (
             <div key={item.step} className="relative">
               <p className="font-display text-5xl font-bold text-ink/10">
                 {item.step}
@@ -51,9 +56,6 @@ export default function Process() {
               <p className="mt-2 font-body text-sm leading-relaxed text-ink/65">
                 {item.desc}
               </p>
-              {i < STEPS.length - 1 && (
-                <div className="mt-6 hidden h-px w-full bg-ink/10 lg:block" />
-              )}
             </div>
           ))}
         </div>

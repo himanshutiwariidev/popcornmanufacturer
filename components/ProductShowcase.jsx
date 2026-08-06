@@ -143,14 +143,14 @@ export default function ProductShowcase() {
       <div className="mx-auto max-w-8xl px-6 lg:px-5">
         <div className=" text-center">
           <span className="font-body text-xs font-bold uppercase tracking-[0.2em] text-popred">
-            The full range
+            Our Products
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-ink sm:text-4xl">
-            Every pack, straight off our line.
+            Our Popcorn Range
           </h2>
           <p className="mt-4 font-body text-base text-ink/70">
-            Real packaging, real flavours — a look at what ships out of our
-            facility every day.
+           We manufacture under multiple product lines to suit different
+            buyers and shelves:
           </p>
         </div>
 
@@ -227,6 +227,30 @@ export default function ProductShowcase() {
             <span className="font-body text-sm font-medium text-ink/80">Loved by Everyone</span>
           </div>
         </div>
+
+      <div className="mx-auto mt-14  rounded-2xl border border-ink/10 bg-white p-6 shadow-sm">
+  <ul className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+    <li className="ml-5 list-disc font-body text-base text-ink/70">
+     <span className="font-extrabold text-black font-2xl"> Crispy Crunchy</span> – our bestselling butter flavour, known for its extra crunch
+    </li>
+
+    <li className="ml-5 list-disc font-body text-base text-ink/70">
+       <span className="font-extrabold text-black font-2xl">Mera PopCorn</span> – classic salted, light and air-popped
+    </li>
+
+    <li className="ml-5 list-disc font-body text-base text-ink/70">
+      <span className="font-extrabold text-black font-2xl">Tip Top Popcorn</span> – salted, with an authentic, homely taste
+    </li>
+
+    <li className="ml-5 list-disc font-body text-base text-ink/70">
+      <span className="font-extrabold text-black font-2xl">Pop Corn (Classic &amp; Butter)</span> – export-quality packs built for consistency at scale
+    </li>
+  </ul>
+
+  <p className="mt-6 font-body text-base text-ink/70">
+    Beyond these, we also develop custom flavours — cheese, caramel, and masala — for clients who want something specific to their brand or market.
+  </p>
+</div>
       </div>
     </section>
   );

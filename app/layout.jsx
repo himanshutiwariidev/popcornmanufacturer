@@ -24,9 +24,17 @@ const baloo = Baloo_2({
 });
 
 export const metadata = {
-  title: "TipTop Kernels | Popcorn Manufacturer & Private Label Partner",
+  metadataBase: new URL("https://popcornmanufacturer.com"),
+  title: "TipTop Food Tech | Popcorn Manufacturer in Delhi",
   description:
-    "Bulk and private-label popcorn manufacturing — from kernel sourcing to flavour, packing and export. FSSAI, ISO and HACCP certified production.",
+    "TipTop Food Tech is a popcorn manufacturer in Delhi trusted by IRCTC, Haldiram and Bikaji. 30+ years, FSSAI certified, 25+ flavours, bulk & private label supply.",
+    keywords: [
+      "Popcorn Manufacturer",
+      "Popcorn Manufacturer in Delhi",
+      ],
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }) {

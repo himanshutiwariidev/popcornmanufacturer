@@ -1,47 +1,54 @@
-import { Popcorn, Wheat, Leaf, WheatOff, ShieldCheck, Smile, Sparkles, Heart } from "lucide-react";
+import { Popcorn, Award, Landmark, Factory, ShieldCheck, Layers, Package, Sparkles, Heart } from "lucide-react";
 
 const FEATURES = [
   {
-    icon: Wheat,
+    icon: Award,
     iconBg: "bg-amber-50",
     iconColor: "#D69A1F",
-    title: "Premium Quality Corn",
-    desc: "We use the finest quality corn for perfect pops every time.",
+    title: "35+ Years of Experience",
+    desc: "Manufacturing popcorn since 1991, with consistency that only comes from decades of hands-on production.",
   },
   {
-    icon: Popcorn,
+    icon: Landmark,
     iconBg: "bg-blue-50",
     iconColor: "#2E6FE0",
-    title: "Air Popped",
-    desc: "Our popcorn is air popped, not fried for a healthier snack.",
+    title: "Trusted by Government & Institutions",
+    desc: "Kendriya Bhandar, Central Police Canteen, Northern Railway, NAFED, HAFED, and IRCTC all stock our popcorn.",
   },
   {
-    icon: Leaf,
+    icon: Factory,
     iconBg: "bg-emerald-50",
     iconColor: "#1F9D5A",
-    title: "100% Veg & Natural",
-    desc: "Made with natural ingredients. 100% vegetarian.",
-  },
-  {
-    icon: WheatOff,
-    iconBg: "bg-orange-50",
-    iconColor: "#E08A2E",
-    title: "Gluten Free",
-    desc: "Naturally gluten free, perfect for a healthy lifestyle.",
+    title: "OEM Partner to India's Biggest Snack Brands",
+    desc: "Haldiram, Bikanervala, Yellow Diamond, Bikaji, 24 Seven, and Babaji have all worked with us for manufacturing.",
   },
   {
     icon: ShieldCheck,
     iconBg: "bg-rose-50",
     iconColor: "#E0473F",
-    title: "Hygienically Packed",
-    desc: "Packed with care in hygienic conditions to ensure safety.",
+    title: "Certified for Food Safety",
+    desc: "FSSAI registered, and follows ISO and HACCP standards across our manufacturing units.",
   },
   {
-    icon: Smile,
+    icon: Popcorn,
+    iconBg: "bg-orange-50",
+    iconColor: "#E08A2E",
+    title: "Air-Popped, Not Fried",
+    desc: "Lighter, lower in fat, and naturally gluten-free.",
+  },
+  {
+    icon: Layers,
     iconBg: "bg-violet-50",
     iconColor: "#7C55D6",
-    title: "Loved by All",
-    desc: "Delicious taste that everyone in the family will enjoy.",
+    title: "Proven Scale & Variety",
+    desc: "2 manufacturing units, 25+ varieties, and 1M+ happy customers.",
+  },
+  {
+    icon: Package,
+    iconBg: "bg-sky-50",
+    iconColor: "#2E9BE0",
+    title: "Private Label Ready",
+    desc: "From flavour formulation to packaging, we help brands launch their own popcorn line without setting up a plant.",
   },
 ];
 
@@ -85,8 +92,8 @@ export default function WhyChooseUs() {
           </span>
 
           <h2 className="relative mt-5 font-heading text-4xl font-extrabold leading-tight sm:text-5xl">
-            <span className="text-slate-900">Why </span>
-            <span className="text-blue-600">Choose Us?</span>
+            <span className="text-slate-900">Not Just Claims, </span>
+            <span className="text-blue-600">Here&apos;s the Proof</span>
             <Sparkles
               aria-hidden
               className="absolute -right-2 -top-5 h-8 w-8 text-tiptop-yellow sm:-right-4"
@@ -95,8 +102,9 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="mt-4 max-w-md font-body text-base leading-relaxed text-ink/60">
-            We make popcorn that&apos;s not just tasty, but better in every
-            way.
+            A lot of companies call themselves the &ldquo;best popcorn
+            manufacturer in Delhi.&rdquo; What actually separates TipTop Food
+            Tech is who trusts us with their shelves:
           </p>
 
           <div className="mt-6 flex items-center gap-3">

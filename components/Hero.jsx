@@ -4,7 +4,7 @@ export default function Hero() {
       
       <div className="hidden md:block h-[600px]">
         <img
-          src="/banner.webp"
+          src="/banner.jpeg"
           alt="Freshly popped TipTop Kernels popcorn on the production line"
           className="h-full w-full object-cover"
         />
@@ -13,7 +13,7 @@ export default function Hero() {
 
       <div className="md:hidden h-[560px] ">
         <img
-          src="/mobilebanner.webp"
+          src="/mobilebanner.jpeg"
           alt="Freshly popped TipTop Kernels popcorn on the production line"
           className="h-full w-full object-cover"
         />

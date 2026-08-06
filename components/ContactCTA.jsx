@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 
 const STATS = [
-  { icon: BadgeCheck, label: "30+ Years\nExperience" },
+  { icon: BadgeCheck, label: "35+ Years\nExperience" },
   { icon: Factory, label: "State-of-the-art\nManufacturing" },
   { icon: Globe, label: "Worldwide\nSupply" },
 ];
 
 const CONTACT_DETAILS = [
-  { icon: Mail, label: "Email", value: "info@tiptopkernels.com" },
+  { icon: Mail, label: "Email", value: "info@tiptopfoodtech.com" },
   { icon: Phone, label: "Phone", value: "+91 98106 37185" },
-  { icon: MapPin, label: "Address", value: "Bawana Industrial Area, DSIIDC Delhi – 110039" },
+  { icon: MapPin, label: "Address", value: " D-12, Sector 2  Bawana Industrial Area, DSIIDC Delhi – 110039 " },
 ];
 
 const TAGS = [

@@ -1,7 +1,7 @@
 import { Award, Factory, Popcorn, Users, Leaf, Heart, WheatOff, Droplet, ShieldCheck } from "lucide-react";
 
 const STATS = [
-  { icon: Award, value: "15+", label: "Years", sub: "of Trust & Quality" },
+  { icon: Award, value: "35+", label: "Years", sub: "of Trust & Quality" },
   { icon: Factory, value: "2+", label: "Modern", sub: "Manufacturing Units" },
   { icon: Popcorn, value: "25+", label: "Delicious", sub: "Varieties" },
   { icon: Users, value: "1M+", label: "Happy", sub: "Customers" },
@@ -44,12 +44,13 @@ export default function About() {
           </span>
 
           {/* Heading */}
-          <h2 className="mt-5 font-heading leading-[1.1] text-tiptop-navy">
+          <h1 className="mt-5 font-heading leading-[1.1] text-tiptop-navy">
             <span className="block text-2xl font-bold sm:text-[1.75rem]">
-              Making Every Moment
+             Popcorn Manufacturer in Delhi — 
+
             </span>
             <span className="relative mt-1 inline-block text-[2.75rem] font-extrabold sm:text-5xl lg:text-[3.25rem]">
-              More Delicious!
+              Making Every Moment More Delicious
               <svg
                 aria-hidden
                 viewBox="0 0 300 20"
@@ -65,20 +66,16 @@ export default function About() {
                 />
               </svg>
             </span>
-          </h2>
+          </h1>
 
           {/* Copy */}
           <p className="mt-7 max-w-xl font-body text-[15px] leading-relaxed text-ink/75">
-            At <strong className="font-bold text-tiptop-red">Tip Top</strong>, we believe popcorn
-            is more than just a snack – it&rsquo;s an experience! Since our beginning, we have
-            been committed to delivering the perfect combination of taste, quality, and crunch
-            in every bite. Made from carefully selected corn and crafted with advanced
-            air-popping technology, our popcorn is light, healthy, and irresistibly delicious.
+         Popcorn should feel like an experience, not just a snack — and that belief has driven TipTop Food Tech since 1991. As a popcorn manufacturer in Delhi, we have spent over 35+ years turning carefully selected corn into the kind of crunch people reach for during late-night cravings, family movie nights, and everything in between.
+
           </p>
           <p className="mt-4 max-w-xl font-body text-[15px] leading-relaxed text-ink/75">
-            From late-night cravings to family movie time,{" "}
-            <strong className="font-bold text-tiptop-red">Tip Top Popcorn</strong> is your
-            perfect companion for every moment.
+       Today, that experience runs across 2 modern manufacturing units in Delhi, more than 25 popcorn varieties, and over 1 million happy customers. Our popcorn is air-popped, not fried, which keeps it light, naturally gluten-free, and just as satisfying without the extra oil.
+
           </p>
                       <div className="md:hidden relative order-first lg:order-last">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[3rem] border-[6px] border-tiptop-yellow/60 shadow-xl lg:aspect-[5/4]">
