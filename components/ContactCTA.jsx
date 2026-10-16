@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   BadgeCheck,
   Factory,
@@ -31,7 +34,33 @@ const TAGS = [
   { icon: Globe, label: "Export" },
 ];
 
+const WEB3FORMS_ACCESS_KEY = "0d091119-62f0-44cf-bd39-8ce25649e1be";
+
 export default function ContactCTA() {
+  const [status, setStatus] = useState("idle");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setStatus("sending");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="contact" className="relative overflow-hidden bg-neutral-50 py-10">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
@@ -84,7 +113,10 @@ export default function ContactCTA() {
 
         {/* Right: form card */}
         <div className="rounded-3xl border border-ink/10 bg-white p-8 shadow-xl sm:p-10">
-          <form>
+          <form onSubmit={handleSubmit}>
+            <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+            <input type="hidden" name="subject" value="New enquiry from popcorn manufacturer" />
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
                 <label
@@ -97,6 +129,8 @@ export default function ContactCTA() {
                   <User className="h-4 w-4 shrink-0 text-ink/35" />
                   <input
                     id="name"
+                    name="name"
+                    required
                     type="text"
                     placeholder="Your name"
                     className="w-full bg-transparent font-body text-sm text-ink placeholder:text-ink/35 focus:outline-none"
@@ -114,6 +148,7 @@ export default function ContactCTA() {
                   <Building2 className="h-4 w-4 shrink-0 text-ink/35" />
                   <input
                     id="company"
+                    name="company"
                     type="text"
                     placeholder="Company name"
                     className="w-full bg-transparent font-body text-sm text-ink placeholder:text-ink/35 focus:outline-none"
@@ -131,6 +166,8 @@ export default function ContactCTA() {
                   <Mail className="h-4 w-4 shrink-0 text-ink/35" />
                   <input
                     id="email"
+                    name="email"
+                    required
                     type="email"
                     placeholder="you@company.com"
                     className="w-full bg-transparent font-body text-sm text-ink placeholder:text-ink/35 focus:outline-none"
@@ -148,6 +185,8 @@ export default function ContactCTA() {
                   <PenLine className="mt-0.5 h-4 w-4 shrink-0 text-ink/35" />
                   <textarea
                     id="message"
+                    name="message"
+                    required
                     rows={3}
                     placeholder="Order volume, flavour, packaging, target market..."
                     className="w-full resize-none bg-transparent font-body text-sm text-ink placeholder:text-ink/35 focus:outline-none"
@@ -170,11 +209,23 @@ export default function ContactCTA() {
 
             <button
               type="submit"
-              className="group mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-popred px-6 py-4 font-body text-sm font-bold text-paper transition-colors hover:bg-popred-dark"
+              disabled={status === "sending"}
+              className="group disabled:cursor-not-allowed disabled:opacity-70 mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-popred px-6 py-4 font-body text-sm font-bold text-paper transition-colors hover:bg-popred-dark"
             >
-              Send enquiry
+              {status === "sending" ? "Sending..." : "Send enquiry"}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </button>
+
+            {status === "success" && (
+              <p className="mt-4 text-center font-body text-sm font-medium text-green-700">
+                Thank you! Your enquiry has been sent — we&apos;ll be in touch soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="mt-4 text-center font-body text-sm font-medium text-popred">
+                Something went wrong. Please try again or email us directly.
+              </p>
+            )}
           </form>
         </div>
       </div>
